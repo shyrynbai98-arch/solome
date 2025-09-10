@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solopreneur Quiz - Discover Your Path to Success</title>
+    <meta name="description" content="Take our personalized quiz to discover your ideal solopreneur path and get a customized business plan.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-page">
+    <header class="header transparent">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">Solopreneur.me</div>
+                <a href="start.html" class="back-button">← Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div class="container">
+            <!-- Quiz Progress -->
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                </div>
+            </div>
+
+            <!-- Quiz Content -->
+            <div class="quiz-content">
+                <div class="question-container" id="questionContainer">
+                    <!-- Questions will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-navigation">
+                <button class="nav-btn prev-btn" id="prevBtn" disabled>Previous</button>
+                <button class="nav-btn next-btn" id="nextBtn" disabled>Next</button>
+                <button class="nav-btn submit-btn" id="submitBtn" style="display: none;">Get My Plan</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Results Modal -->
+    <div class="results-modal" id="resultsModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎉 Your Personalized Solopreneur Plan is Ready!</h2>
+                <p>Based on your answers, we've created a customized roadmap to help you earn $70K-$100K per year</p>
+            </div>
+            
+            <div class="plan-preview">
+                <div class="plan-item">
+                    <div class="plan-icon">🎯</div>
+                    <div class="plan-details">
+                        <h3>Your Business Type</h3>
+                        <p id="businessType">SaaS Development</p>
+                    </div>
+                </div>
+                
+                <div class="plan-item">
+                    <div class="plan-icon">💰</div>
+                    <div class="plan-details">
+                        <h3>Income Goal</h3>
+                        <p id="incomeGoal">$85,000/year</p>
+                    </div>
+                </div>
+                
+                <div class="plan-item">
+                    <div class="plan-icon">📅</div>
+                    <div class="plan-details">
+                        <h3>Timeline to Success</h3>
+                        <p id="timeline">8-12 months</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-plans">
+                <h3>Choose Your Plan to Get Started</h3>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Monthly</h4>
+                            <div class="plan-price">
+                                <span class="price">$13.39</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <div class="price-per-day">$0.44 per day</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Personalized business plan</li>
+                            <li>✅ Weekly coaching calls</li>
+                            <li>✅ Community access</li>
+                            <li>✅ Course materials</li>
+                        </ul>
+                        <button class="plan-btn">Start Monthly</button>
+                    </div>
+
+                    <div class="plan-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h4>3 Months</h4>
+                            <div class="plan-price">
+                                <span class="price">$29.69</span>
+                                <span class="period">/3 months</span>
+                            </div>
+                            <div class="price-per-day">$0.32 per day</div>
+                            <div class="savings">Save 28%</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Everything in Monthly</li>
+                            <li>✅ 1-on-1 strategy session</li>
+                            <li>✅ Priority support</li>
+                            <li>✅ Bonus resources</li>
+                        </ul>
+                        <button class="plan-btn">Start 3-Month Plan</button>
+                    </div>
+
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Annual</h4>
+                            <div class="plan-price">
+                                <span class="price">$67.59</span>
+                                <span class="period">/year</span>
+                            </div>
+                            <div class="price-per-day">$0.18 per day</div>
+                            <div class="savings">Save 60%</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Everything in 3-Month</li>
+                            <li>✅ Monthly 1-on-1 sessions</li>
+                            <li>✅ Advanced courses</li>
+                            <li>✅ Lifetime updates</li>
+                        </ul>
+                        <button class="plan-btn">Start Annual Plan</button>
+                    </div>
+                </div>
+                
+                <div class="guarantee">
+                    <p>💯 <strong>30-day money-back guarantee</strong> - Start risk-free today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
